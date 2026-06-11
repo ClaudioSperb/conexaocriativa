@@ -6,11 +6,14 @@ preço_por_grama = 0.09
 while True:
     peso = float(input('Quantas gramas tem a peça [Gramas] -> '))
     tempo = float(input('Quanto tempo de impressão [Horas] -> '))
-    custo_por_peça = preço_por_grama * peso
-    print(f'O valor total é R${custo_por_peça:.2f}')
+    mao_de_obra = str(input('A peça requer mão de obra [S / N] -> ')).upper().strip()
+    custo_por_peça = preço_por_grama * peso + 0.84 + 0.30
+    custo_mao_de_obra = custo_por_peça + 2.03
+    if mao_de_obra == 'S':
+        print(f'O valor total é R${custo_mao_de_obra:.2f}')
+    else:
+        print(f'O valor total é R${custo_por_peça:.2f}')
     tot = int(input('Quantas peças produzidas -> '))
-    if tot > 0 and tot <= 3:
-        continue
     res = str(input('Deseja continuar [S / N] -> ')).capitalize().strip()
     
                         # 100g x 1 hora = R$9.00 ( CUSTO MATERIAL)
