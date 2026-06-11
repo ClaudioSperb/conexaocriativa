@@ -1,5 +1,7 @@
+from colorama import Fore
+
 print(f'{40 * '='}')
-print(f'{'SISTEMA CONEXÃO 3D CRIATIVA'}'.center(40))
+print(f'{Fore.LIGHTRED_EX}{'SISTEMA CONEXÃO 3D CRIATIVA'}{Fore.RESET}'.center(50))
 print(f'{40 * '='}')
 preço_por_grama = 0.09
 
@@ -7,12 +9,19 @@ while True:
     peso = float(input('Quantas gramas tem a peça [Gramas] -> '))
     tempo = float(input('Quanto tempo de impressão [Horas] -> '))
     mao_de_obra = str(input('A peça requer mão de obra [S / N] -> ')).upper().strip()
-    custo_por_peça = preço_por_grama * peso + 0.84 + 0.30
+
+    custo_por_peça = preço_por_grama * peso + (0.84 * tempo) + (0.30 * tempo)
     custo_mao_de_obra = custo_por_peça + 2.03
+
     if mao_de_obra == 'S':
-        print(f'O valor total é R${custo_mao_de_obra:.2f}')
+        print(f'{40 * '='}')
+        print(f'O valor total é {Fore.GREEN}R${custo_mao_de_obra:.2f}{Fore.RESET}'.center(50))
+        print(f'{40 * '='}')
     else:
-        print(f'O valor total é R${custo_por_peça:.2f}')
+        print(f'{40 * '='}')
+        print(f'O valor total é {Fore.GREEN}R${custo_por_peça:.2f}{Fore.RESET}'.center(50))
+        print(f'{40 * '='}')
+
     tot = int(input('Quantas peças produzidas -> '))
     res = str(input('Deseja continuar [S / N] -> ')).capitalize().strip()
     
