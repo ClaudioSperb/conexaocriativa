@@ -1,4 +1,5 @@
 from colorama import Fore
+from time import sleep
 
 print(f'{40 * '='}')
 print(f'{Fore.LIGHTRED_EX}{'SISTEMA CONEXÃO 3D CRIATIVA'}{Fore.RESET}'.center(50))
@@ -31,6 +32,10 @@ while True:
                         # CUSTO DE ENERGIA - R$0,30
 
     if res == 'N':
+        print('FINALIZANDO SISTEMA . . .')
+        sleep(1)
+        print('>>>>>>>>')
+        sleep(1)
         break
     
                         #Até 5 PEÇAS - VALOR NORMAL
