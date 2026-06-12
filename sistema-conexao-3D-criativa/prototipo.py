@@ -24,6 +24,19 @@ while True:
         print(f'{40 * '='}')
 
     tot = int(input('Quantas peças produzidas -> '))
+    #VALOR NORMAL ATÉ 4 PEÇAS
+    if tot <= 4 and mao_de_obra == 'S':
+        print(f'O valor total Bruto é {Fore.GREEN}R${custo_mao_de_obra:.2f}{Fore.RESET}')
+        print(f'{40 * '~'}')
+        print(f'Valor final de {tot} peças é {Fore.LIGHTGREEN_EX}R${tot * (custo_mao_de_obra * 4):.2f}{Fore.RESET}')
+        print('')
+    else:
+        print(f'O valor total Bruto é {Fore.GREEN}R${tot * custo_por_peça:.2f}{Fore.RESET}')
+        print(f'{40 * '~'}')
+        print(f'O valor total de {tot} peças é {Fore.LIGHTGREEN_EX}R${tot * (custo_por_peça * 4):.2f}{Fore.RESET}')
+        print('')
+    #VALOR COM 
+        
     res = str(input('Deseja continuar [S / N] -> ')).capitalize().strip()
     
                         # 100g x 1 hora = R$9.00 ( CUSTO MATERIAL)
