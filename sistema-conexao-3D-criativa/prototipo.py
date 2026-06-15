@@ -35,8 +35,8 @@ while True:
         print(f'{40 * '~'}')
         print(f'O valor total de {tot} peças é {Fore.LIGHTGREEN_EX}R${tot * (custo_por_peça * 4):.2f}{Fore.RESET}')
         print('')
-    #VALOR COM 
-        
+    #VALOR COM DESCONTO DE 5%
+    
     res = str(input('Deseja continuar [S / N] -> ')).capitalize().strip()
     
                         # 100g x 1 hora = R$9.00 ( CUSTO MATERIAL)
