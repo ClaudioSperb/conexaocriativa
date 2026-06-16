@@ -18,9 +18,9 @@ while True:
     else:
         custo_unitario = custo_base
 
-    print(f"{50 * '='}")
-    print(f"O custo unitário é {Fore.YELLOW}R${custo_unitario:.2f}{Fore.RESET}".center(60))
-    print(f"{50 * '='}")
+    print(f"{60 * '='}")
+    print(f"O custo unitário é {Fore.YELLOW}R${custo_unitario:.2f}{Fore.RESET}".center(50))
+    print(f"{60 * '='}")
 
     tot = int(input('Quantas peças produzidas -> '))
     
